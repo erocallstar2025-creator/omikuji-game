@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>巫女おみくじ</title>
+    <link rel="stylesheet" href="styles.css?v=2" />
+  </head>
+  <body>
+    <main class="app" aria-live="polite">
+      <section class="topbar">
+        <p class="eyebrow">今日の運勢</p>
+        <h1>巫女おみくじ</h1>
+      </section>
+
+      <section class="stage" id="stage" aria-label="おみくじを振る場所">
+        <img id="miko" class="miko" src="assets/miko01.jpg" alt="おみくじを持つ巫女" draggable="false" />
+
+        <div class="guide" id="guide">
+          <strong id="guideTitle">準備はよろしいですか</strong>
+          <span id="guideText">ボタンを押してから上下に振ってください</span>
+          <small id="counter">0 / 12</small>
+          <button id="start" class="primary-button" type="button">おみくじを引く</button>
+        </div>
+
+        <div class="result" id="result" hidden>
+          <article class="paper">
+            <span class="seal">御神籤</span>
+            <h2 id="fortuneName">大吉</h2>
+            <p id="fortuneText">願いごとは勢いよく進みます。</p>
+            <dl class="details" id="fortuneDetails"></dl>
+            <div class="result-actions">
+              <button id="hidePaper" type="button">おみくじを隠す</button>
+              <button id="retry" type="button">もう一度引く</button>
+            </div>
+          </article>
+          <button id="showPaper" class="show-paper" type="button" hidden>おみくじを表示</button>
+        </div>
+
+        <div class="flash" id="flash"></div>
+      </section>
+    </main>
+
+    <script src="game.js?v=2"></script>
+  </body>
+</html>
